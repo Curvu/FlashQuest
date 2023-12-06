@@ -1,0 +1,73 @@
+@import "styles/mixins";
+
+.button {
+  @include container(transparent, 0, $mediumRadius, $padding: 0.5rem 1rem);
+  @include text($weight: 700, $height: 100%, $spacing: 2.8px);
+  cursor: pointer;
+  outline: none;
+  width: 10rem;
+  height: 2.55rem;
+
+  &.primary {
+    background: url('assets/button.svg') no-repeat center center;
+    background-position-x: -300px;
+    transition: all 0.2s ease-in-out;
+    background-color: $aqua;
+    color: $white;
+
+    &:hover {
+      background-color: $aqua;
+      background-position-x: -15px;
+    }
+
+    &:active {
+      animation: slide 0.2s ease-in-out;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  &.secondary {
+    background-color: $white;
+    color: $green-2;
+
+    &:hover {
+      background-color: $green-3;
+    }
+
+    &:active {
+      color: $white;
+      background-color: transparent;
+    }
+  }
+
+  &.tertiary {
+    background-color: transparent;
+    color: $white;
+
+    &:hover {
+      color: $white;
+      background-color: $green-3;
+    }
+
+    &:active {
+      color: $green-2;
+      background-color: $white;
+    }
+  }
+}
+
+@keyframes slide {
+  0% {
+    background-position-x: -15px;
+  }
+
+  25%,
+  50%,
+  75% {
+    background-position-x: 0px;
+  }
+
+  100% {
+    background: $green-2;
+  }
+}

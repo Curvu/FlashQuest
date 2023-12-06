@@ -1,0 +1,44 @@
+@import "styles/mixins";
+
+.input {
+  @include flex(column, flex-start, flex-start, $gap: 0.30rem);
+
+  >p {
+    @include text($size: 0.75rem);
+  }
+
+  >div {
+    @include flex(row, space-between, center, $gap: 0);
+    @include container($border: 0, $borderRadius: $mediumRadius);
+    width: 100%;
+    border: 2px 2px 0 2px; // top right bottom left
+    border-bottom: 2px solid $aqua;
+    box-shadow: $inputShadow;
+
+    &:focus-within {
+      margin: 0;
+      border: 2px solid $aqua;
+
+      &.error {
+        border: 2px solid $red;
+      }
+    }
+
+    input {
+      @include text($size: 1rem);
+      border: 0;
+      outline: 0;
+      background: transparent;
+      padding: 0.5rem;
+    }
+
+    >img {
+      @include size(1.5rem, 1.5rem);
+      margin-right: 0.5rem;
+    }
+
+    &.error {
+      border-bottom: 2px solid $red;
+    }
+  }
+}

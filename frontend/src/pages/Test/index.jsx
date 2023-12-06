@@ -1,40 +1,52 @@
-import { api } from 'api/api';
-import { useRequest } from 'hooks/useRequest';
 import React, { useEffect } from 'react';
+import { FormProvider, useForm } from 'react-hook-form';
+import * as Yup from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup';
+
+import { Input } from 'components/Input';
+import { Button } from 'components/Button';
+
 import styles from './test.module.scss';
 
+const validation = Yup.object({
+  name: Yup.string().required('Name is required'),
+  lastName: Yup.string().required('Last name is required'),
+  email: Yup.string().required('Email is required'),
+});
+
 export function Test() {
-  const { data: users, doRequest: getUsers } = useRequest(api.getUsers, {
-    onSuccess: () => {},
-    onError: () => {},
+  const methods = useForm({
+    resolver: yupResolver(validation),
   });
 
-  useEffect(() => {
-    getUsers();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const onSubmit = (data) => console.log(data);
 
   return (
     <div className={styles.testDiv}>
-      <h1>Test</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Email</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users?.map((user) => (
-            <tr key={user.id}>
-              <td>{user.id}</td>
-              <td>{user.name}</td>
-              <td>{user.email}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <FormProvider {...methods}>
+        <form onSubmit={methods.handleSubmit(onSubmit)}>
+          <Input name="name" label="Name" />
+          <Input name="lastName" label="Last name" />
+          <Input name="email" label="Email" />
+          <Button type="submit" handle={methods.handleSubmit(onSubmit)}>
+            1st
+          </Button>
+          <Button
+            type="submit"
+            handle={methods.handleSubmit(onSubmit)}
+            variant="secondary"
+          >
+            2nd
+          </Button>
+          <Button
+            type="submit"
+            handle={methods.handleSubmit(onSubmit)}
+            variant="tertiary"
+          >
+            3rd
+          </Button>
+        </form>
+      </FormProvider>
     </div>
   );
 }

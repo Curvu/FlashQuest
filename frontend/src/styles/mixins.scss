@@ -14,12 +14,13 @@
   padding: $padding;
 }
 
-@mixin text($family: $montserrat, $size: 1rem, $height: normal, $weight: 400, $color: $black) {
+@mixin text($family: $poppins, $size: 1rem, $height: normal, $weight: 400, $color: $black, $spacing: normal) {
   font-family: $family;
   font-size: $size;
   line-height: $height;
   font-weight: $weight;
   color: $color;
+  letter-spacing: $spacing;
 }
 
 @mixin flex($direction: row, $justify: flex-start, $align: center, $gap: 1rem, $wrap: nowrap) {
