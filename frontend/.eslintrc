@@ -22,6 +22,7 @@
     "prettier"
   ],
   "rules": {
+    "react/button-has-type": "off",
     "react/sort-comp": "warn",
     "react/prop-types": "off",
     "react/static-property-placement": "off",

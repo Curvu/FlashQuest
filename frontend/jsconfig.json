@@ -11,11 +11,11 @@
       "components/*": [
         "src/components/*"
       ],
+      "assets/*": [
+        "src/assets/*"
+      ],
       "fonts/*": [
         "src/assets/fonts/*"
-      ],
-      "images/*": [
-        "src/assets/images/*"
       ],
       "styles/*": [
         "src/styles/*"
