@@ -37,11 +37,13 @@
     &:active {
       color: $white;
       background-color: transparent;
+      border: 1px solid $white;
     }
   }
 
   &.tertiary {
     background-color: transparent;
+    border: 1px solid $white;
     color: $white;
 
     &:hover {

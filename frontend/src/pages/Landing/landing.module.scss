@@ -1,0 +1,200 @@
+@import "styles/mixins";
+
+.main {
+  @include flex(column, $align: flex-start);
+  position: relative;
+  padding-top: 15rem;
+
+  .presentation {
+    @include flex(column, $align: flex-start, $wrap: wrap);
+    padding: 0 6rem 15rem 6rem;
+
+    >div {
+      @include flex(column, center, $wrap: wrap);
+      width: 28rem;
+
+      >h1 {
+        @include text($size: 3rem, $height: 100%);
+      }
+    }
+
+    >img {
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+    }
+  }
+
+  .services {
+    @include flex(column, $gap: 1.5rem);
+    padding: 0 6rem 3rem 6rem;
+    width: 100%;
+
+    >h2 {
+      @include text($size: 1.5rem, $height: 100%);
+
+      >span {
+        font-weight: 600;
+      }
+    }
+
+    .cards {
+      @include flex;
+
+      >div {
+        @include size(15rem, 15rem);
+
+        >h3 {
+          @include text($size: 1.5rem, $height: 100%, $weight: 500);
+        }
+      }
+    }
+  }
+
+  .solutions {
+    @include flex(column, $align: flex-end, $wrap: wrap);
+    padding: 3rem 10% 3rem 0rem;
+    background-color: $green-2;
+    width: 100%;
+    position: relative;
+
+    >div {
+      @include flex(column, $align: flex-start, $wrap: wrap, $gap: 2rem);
+      width: 30rem;
+      z-index: 1;
+
+      >* {
+        color: $white;
+      }
+    }
+
+    >img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .buttons {
+      @include flex($gap: 1rem);
+    }
+  }
+
+  .about {
+    @include flex($justify: center, $align: space-between, $gap: 2rem);
+    padding: 10rem 3rem 6rem 6rem;
+    width: 100%;
+
+    .pictures {
+      display: grid;
+      grid-template: repeat(2, 12rem) / repeat(6, 6rem);
+      grid-gap: 2rem;
+
+      // make the last 2 pictures be in the center of the grid ignoring the grid-gap
+      >div:nth-child(1) {
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 2;
+      }
+
+      >div:nth-child(2) {
+        grid-column: 3 / span 3;
+        grid-row: 1 / span 2;
+      }
+
+      >div:nth-child(3) {
+        grid-column: 5 / span 3;
+        grid-row: 1 / span 2;
+      }
+
+      >div:nth-child(4) {
+        grid-column: 2 / span 3;
+        grid-row: 2 / span 2;
+      }
+
+      >div:nth-child(5) {
+        grid-column: 4 / span 3;
+        grid-row: 2 / span 2;
+      }
+    }
+
+    .text {
+      @include flex(column, center, flex-start, $gap: 2rem);
+      width: 40rem;
+
+      >h3 {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .joinUs {
+    @include flex($justify: center, $gap: 6rem);
+    width: 100%;
+    padding: 3rem 6rem;
+
+    .text {
+      @include flex(column, $gap: 2rem);
+      height: 100%;
+      max-width: 30rem;
+
+      >h2 {
+        @include text($size: 3rem, $height: 100%, $weight: 600);
+      }
+    }
+
+    >form {
+      @include flex(column, $align: flex-start);
+
+      >label {
+        width: 100%;
+      }
+
+      .inputs {
+        @include flex;
+      }
+    }
+  }
+
+  footer {
+    @include flex($align: flex-start, $gap: 4rem);
+    padding: 3rem 6rem;
+    background-color: $green-2;
+
+    >div {
+      @include flex(column, $align: flex-start, $gap: 0.3rem);
+      @include size(33%, 100%);
+
+      >* {
+        color: $white;
+      }
+    }
+
+    .socials {
+      @include flex(column, $gap: 1rem);
+
+      >h2 {
+        @include text($color: $white, $size: 1.5rem, $height: 100%, $weight: 600);
+      }
+
+      a {
+        @include text($color: $white, $size: 1rem);
+        @include flex($justify: center);
+
+        >svg {
+          @include size(1.5rem, 1.5rem);
+        }
+      }
+    }
+
+    .dataNotice,
+    .legalNotice {
+
+      >h3 {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+    }
+  }
+}

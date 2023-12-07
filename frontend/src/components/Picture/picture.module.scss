@@ -1,0 +1,32 @@
+@import "styles/mixins";
+
+.picture {
+  @include flex(column, center, start);
+  max-width: 12rem;
+  max-height: 12rem;
+  position: relative;
+
+  .circle {
+    @include size(90%, 90%);
+    border-radius: 50%;
+    background-color: $blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    // make the circle be left aligned
+    transform: translateX(8%) translateY(1%);
+  }
+
+  >img {
+    @include size(90%, 90%);
+    border-radius: 50%;
+  }
+
+
+  >span {
+    @include text($weight: 600, $height: 100%, $spacing: 3.6px);
+    width: 100%;
+    text-align: center;
+  }
+}

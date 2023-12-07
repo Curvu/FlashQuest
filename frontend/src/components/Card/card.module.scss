@@ -1,0 +1,6 @@
+@import "styles/mixins";
+
+.card {
+  @include container($white, 0, $mediumRadius, $padding: 3rem 1.5rem, $shadow: $cardShadow);
+  border-bottom: 2px solid $aqua;
+}

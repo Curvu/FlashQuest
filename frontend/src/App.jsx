@@ -1,13 +1,23 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
 import React from 'react';
 
-import { Test } from './pages/Test';
+import { Navbar } from 'components/Navbar';
+import { Landing } from './pages/Landing';
 
 export function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="*" element={<Test />} />
+        <Route
+          element={
+            <>
+              <Navbar />
+              <Outlet />
+            </>
+          }
+        >
+          <Route path="*" element={<Landing />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
