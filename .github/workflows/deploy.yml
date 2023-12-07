@@ -19,8 +19,8 @@ jobs:
         with:
           node-version: 16
 
-      - name: change directory
-        run: cd ./frontend
+      - name: Change to frontend directory
+        run: cd frontend
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
