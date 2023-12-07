@@ -26,6 +26,7 @@
 
     input {
       @include text($size: 1rem);
+      width: 100%;
       border: 0;
       outline: 0;
       background: transparent;
