@@ -54,8 +54,8 @@
   }
 
   .solutions {
-    @include flex(column, $align: flex-end, $wrap: wrap);
-    padding: 3rem 10% 3rem 0rem;
+    @include flex(column, $align: center, $wrap: wrap);
+    padding: 3rem 10% 3rem 55rem; // top right bottom left
     background-color: $green-2;
     width: 100%;
     position: relative;
@@ -71,8 +71,9 @@
     }
 
     >img {
+      @include size(50rem, 50rem);
       position: absolute;
-      top: 0;
+      top: 2rem;
       left: 0;
       z-index: 0;
     }
@@ -159,6 +160,7 @@
 
   footer {
     @include flex($align: flex-start, $gap: 4rem);
+    width: 100%;
     padding: 3rem 6rem;
     background-color: $green-2;
 

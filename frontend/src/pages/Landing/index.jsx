@@ -8,10 +8,11 @@ import { Input } from 'components/Input';
 import { Button } from 'components/Button';
 import { Picture } from 'components/Picture';
 import { Card } from 'components/Card';
+import { Solutions } from 'components/Solutions';
 import pic from 'assets/pic.png';
 import imagem from 'assets/imagem.png';
+import banner from 'assets/banner.png';
 
-import { Solutions } from 'components/Solutions';
 import styles from './landing.module.scss';
 
 const validation = Yup.object({
@@ -22,20 +23,23 @@ const validation = Yup.object({
 
 const solutions = [
   {
-    title: 'Solution 1',
-    description: 'fgkldgjldkf gjl kdfgjlkdfgj lkdfjglkdldk fgjdlkfjggfdfgd',
+    title: 'Insere os teus materiais',
+    description:
+      'Para além dos FlashCards disponíveis, cria novos adicionando os teus apontamentos e sebentas',
   },
   {
-    title: 'Solution 2',
-    description: 'fgkldgjldkf gjl kdfgjlkdfgj lkdfjglkdldk fgjdlkfjggfdfgd',
+    title: 'Estuda de forma didática e Interativa',
+    description:
+      'acompanha o teu progresso e pontuação ao estudares com os nossos FlashCards interativos',
   },
   {
-    title: 'Solution 3',
-    description: 'fgkldgjldkf gjl kdfgjlkdfgj lkdfjglkdldk fgjdlkfjggfdfgd',
+    title: 'Partilha Flashcards',
+    description: 'Partilha os teus FlashCards e estuda com amigos',
   },
   {
-    title: 'Solution 4',
-    description: 'fgkldgjldkf gjl kdfgjlkdfgj lkdfjglkdldk fgjdlkfjggfdfgd',
+    title: 'Partilha Os teus resultados',
+    description:
+      'Partilha os resultados obtidos nas tuas avaliações e inspira outros a melhorar',
   },
 ];
 
@@ -78,11 +82,10 @@ export function Landing() {
     <main className={styles.main}>
       <section className={styles.presentation}>
         <div>
-          <h1>We Create Solutions for Your Buiseness</h1>
+          <h1>Simplifica o estudo com flashcards personalizados!</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
-            sapien lectus. Aliquam consectetur vitae ante ut lobortis. Praesent
-            et libero velit.
+            Nunca te sentes cansado de fazer flashcards manualmente? Adere já à
+            FlashQuest e economiza tempo e melhora o teu estudo!
           </p>
         </div>
         <img src={imagem} alt="imagem" />
@@ -92,49 +95,39 @@ export function Landing() {
       </section>
       <section className={styles.services}>
         <h2>
-          We Provide The <span>Best Services</span>
+          <span>Benefícios</span> da nossa Aplicação
         </h2>
         <div className={styles.cards}>
           <Card>
-            <h3>Card</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
-              sapien lectus. Aliquam consectetur vitae ante ut lobortis.
-            </p>
+            <h3>Otimiza Tempo</h3>
+            <p>Cria os teus flashcards apenas com um click</p>
           </Card>
           <Card>
-            <h3>Card</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
-              sapien lectus. Aliquam consectetur vitae ante ut lobortis.
-            </p>
+            <h3>Especificidade</h3>
+            <p>Gera flashCards a partir dos teus resumos e sebentas</p>
           </Card>
           <Card>
-            <h3>Card</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
-              sapien lectus. Aliquam consectetur vitae ante ut lobortis.
-            </p>
+            <h3>Eficiência</h3>
+            <p>Esquece a Construção e Foca-te na memorização</p>
           </Card>
           <Card>
-            <h3>Card</h3>
+            <h3>Interatividade</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
-              sapien lectus. Aliquam consectetur vitae ante ut lobortis.
+              Estuda de forma mais interativa Conquistando pontos ao resolver
+              FlashCards
             </p>
           </Card>
         </div>
       </section>
       <section className={styles.solutions}>
-        {/* //TODO: <img src={imagem} alt="imagem" /> */}
+        <img src={banner} alt="imagem" />
         <div>
-          <h3>Simple Solutions</h3>
+          <h3>Soluções simples</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
-            sapien lectus. Aliquam consectetur vitae ante ut lobortis. Praesent
-            et libero velit. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Donec vel sapien lectus. Aliquam consectetur vitae ante ut
-            lobortis. Praesent et libero velit.
+            Para a geração dos flashcards é utilizada uma IA (Inteligência
+            Artificial) o que permite gerar FlashCards personalizados
+            instantaneamente. Para teres acesso aos teus FlashCards basta
+            seguires os seguintes passos:
           </p>
           <Solutions data={solutions} />
           <div className={styles.buttons}>
@@ -151,14 +144,12 @@ export function Landing() {
         <div className={styles.text}>
           <h3>A Nossa Empresa</h3>
           <p>
-            dfgdfgdfgkfgkadfgfkiugf kiurfgy eiurgkeiurt ekrutgae rkutgerutg
-            ekjrutgkejrutg ekjrutg kejurtg kejurtgkejrut gejurgt eujrtg jrgt
-            ejhrgt ejhrtg ejhrtg jehrtg ehrtg ejhrtg jehrtg ehrtg jehrtg ejhtg
-            ejtgejrt jehr tjehrtgejhrtg
+            Somos estudantes de Engenharia Informática da Universidade de
+            Coimbra e temos como objetivo melhorar e simplificar o estudo de
+            todos os alunos com a geração de flashcards personalizados através
+            de IA (Inteligência Artificial).
           </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
-          </p>
+          <p>Nota: caixa de texto já cá estava mas não sei se será útil</p>
         </div>
         <div className={styles.pictures}>
           {pictures.map((picture) => (
@@ -170,11 +161,9 @@ export function Landing() {
         <div className={styles.text}>
           <h2>Junte-se a Nós</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
-            sapien lectus. Aliquam consectetur vitae ante ut lobortis. Praesent
-            et libero velit. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Donec vel sapien lectus. Aliquam consectetur vitae ante ut
-            lobortis. Praesent et libero velit.
+            Esta aplicação ainda se encontra em desenvolvimento. Deixa-nos o teu
+            email para seres notificado quando estiver tudo pronto para puderes
+            desfrutar dos nossos serviços.
           </p>
         </div>
         <FormProvider {...methods}>
