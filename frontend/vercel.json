@@ -5,6 +5,10 @@
       "destination": "/loja"
     },
     {
+      "source": "/beta",
+      "destination": "/beta"
+    },
+    {
       "source": "/(.*)",
       "destination": "/"
     }

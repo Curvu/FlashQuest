@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -76,7 +76,9 @@ export function Landing() {
     resolver: yupResolver(validation),
   });
 
-  const onSubmit = (data) => console.log(data);
+  const joinUsRef = useRef(null);
+
+  const onSubmit = (data) => {};
 
   return (
     <main className={styles.main}>
@@ -89,7 +91,12 @@ export function Landing() {
           </p>
         </div>
         <img src={imagem} alt="imagem" />
-        <Button type="submit" handle={() => {}}>
+        <Button
+          type="submit"
+          handle={() => {
+            joinUsRef.current.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
           Junte-se
         </Button>
       </section>
@@ -157,7 +164,7 @@ export function Landing() {
           ))}
         </div>
       </section>
-      <section className={styles.joinUs}>
+      <section className={styles.joinUs} ref={joinUsRef}>
         <div className={styles.text}>
           <h2>Junte-se a Nós</h2>
           <p>

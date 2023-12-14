@@ -22,31 +22,37 @@ const items = [
   {
     title: 'Caneca',
     subTitle: 'Sustentável',
+    price: '8€',
     imagens: [mug1, mug2],
   },
   {
     title: 'Cartas (Simples)',
     subTitle: 'Papel Reciclado',
+    price: '6€',
     imagens: [simpleCards1, simpleCards2],
   },
   {
     title: 'Cartas (Padrão)',
     subTitle: 'Papel Reciclado',
+    price: '6€',
     imagens: [complexCards1, complexCards2],
   },
   {
     title: 'Tote Bag',
     subTitle: 'Sustentável',
+    price: '6€',
     imagens: [bag1, bag2],
   },
   {
     title: 'Study Blanket',
     subTitle: 'Nuvem Autêntica',
+    price: '25€',
     imagens: [blanket1, blanket2],
   },
   {
     title: 'T-Shirt',
     subTitle: '100% Algodão',
+    price: '12€',
     imagens: [shirt1, shirt2],
   },
 ];

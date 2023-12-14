@@ -41,10 +41,11 @@
     }
 
     .cards {
-      @include flex;
+      @include flex($gap: 1.5rem);
 
       >div {
         @include size(15rem, 15rem);
+        @include flex(column, $align: flex-start);
 
         >h3 {
           @include text($size: 1.5rem, $height: 100%, $weight: 500);
@@ -71,7 +72,7 @@
     }
 
     >img {
-      @include size(50rem, 50rem);
+      @include size(43rem, 46rem);
       position: absolute;
       top: 2rem;
       left: 0;

@@ -5,23 +5,28 @@ import logo from 'assets/logo.svg';
 
 import styles from './navbar.module.scss';
 
-export function Navbar() {
+const variants = {
+  primary: styles.primary,
+  secondary: styles.secondary,
+  tertiary: styles.tertiary,
+};
+
+export function Navbar({ variant = 'primary' }) {
   return (
-    <nav className={styles.navbar}>
-      <img src={logo} alt="logo" />
+    <nav className={`${styles.navbar} ${variants[variant]}`}>
+      <Link to="/">
+        <img src={logo} alt="logo" />
+      </Link>
 
       <ul>
         <li>
-          <Link to="/">Start</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="#about">About us</Link>
+          <Link to="/beta">Beta</Link>
         </li>
         <li>
           <Link to="/loja">Loja</Link>
-        </li>
-        <li>
-          <Link to="#contact">Contact</Link>
         </li>
       </ul>
     </nav>

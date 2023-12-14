@@ -5,7 +5,7 @@
 
   button {
     @include flex(row, $align: center, $gap: 0.3rem);
-    @include size(1rem, 1rem);
+    @include size(0.75rem, 0.75rem);
     @include container($borderColor: $grey-1, $borderRadius: 50%);
     cursor: pointer;
 

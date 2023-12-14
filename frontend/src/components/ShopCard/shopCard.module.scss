@@ -3,6 +3,11 @@
 .card {
   @include flex(column, $align: center, $gap: 1rem);
 
+  h2 {
+    @include text($size: 1.25rem, $weight: 600);
+    @include flex($justify: space-between);
+  }
+
   .bottom {
     width: 100%;
     text-align: left;

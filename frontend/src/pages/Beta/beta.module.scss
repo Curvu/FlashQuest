@@ -1,0 +1,42 @@
+@import "styles/mixins";
+
+.main {
+  @include flex(column, $align: flex-start);
+  position: relative;
+  padding-top: 9rem;
+
+  .cards {
+    @include flex($justify: center);
+    background-color: $aqua;
+    padding: 4rem;
+    width: 100%;
+  }
+
+  .joinUs {
+    @include flex($justify: center, $gap: 6rem);
+    width: 100%;
+    padding: 3rem 6rem;
+
+    .text {
+      @include flex(column, $gap: 2rem);
+      height: 100%;
+      max-width: 30rem;
+
+      >h2 {
+        @include text($size: 3rem, $height: 100%, $weight: 600);
+      }
+    }
+
+    >form {
+      @include flex(column, $align: flex-start);
+
+      >label {
+        width: 100%;
+      }
+
+      .inputs {
+        @include flex;
+      }
+    }
+  }
+}

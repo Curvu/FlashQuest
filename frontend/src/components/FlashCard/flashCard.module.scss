@@ -1,0 +1,40 @@
+@import "styles/mixins";
+
+.card {
+  @include container($white, 0, $mediumRadius, $padding: 1.5rem 3rem, $shadow: $flashCardShadow);
+  @include flex(column, space-between, $gap: 2rem);
+  @include size(50rem, 30rem);
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+
+  .cardMain {
+    @include flex(column, $gap: 2rem);
+    width: 100%;
+  }
+
+  h2 {
+    @include text($size: 2.5rem, $height: 100%, $spacing: 10px);
+  }
+
+  .items {
+    @include flex(column, $align: flex-start);
+
+    span {
+      @include flex(column, $align: flex-start, $gap: 0.5rem);
+      width: 100%;
+
+      >* {
+        text-align: left;
+      }
+    }
+
+    h3 {
+      @include text($size: 1.25rem, $height: 110%, $weight: 600);
+    }
+  }
+
+  >p {
+    @include text($height: 100%, $spacing: 2.8px);
+  }
+}

@@ -6,7 +6,7 @@ main {
   header {
     @include size(100%, 45rem);
     position: relative;
-    padding: 15rem 6rem 0rem 6rem; // top, right, bottom, left
+    padding: 10rem 6rem 0rem 6rem; // top, right, bottom, left
     background-color: $aqua-2;
 
     .left {
