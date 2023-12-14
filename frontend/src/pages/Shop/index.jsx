@@ -42,7 +42,7 @@ const items = [
   {
     title: 'Study Blanket',
     subTitle: 'Nuvem Autêntica',
-    imagens: [blanket1, blanket2, blanket2],
+    imagens: [blanket1, blanket2],
   },
   {
     title: 'T-Shirt',
