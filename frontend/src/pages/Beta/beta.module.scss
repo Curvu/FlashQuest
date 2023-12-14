@@ -6,10 +6,30 @@
   padding-top: 9rem;
 
   .cards {
-    @include flex($justify: center);
+    @include size(100%, 40rem);
     background-color: $aqua;
     padding: 4rem;
-    width: 100%;
+    position: relative;
+
+    >button {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 45%;
+      left: 53%;
+      z-index: 0;
+
+      &:nth-child(2) {
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+      }
+
+      &:nth-child(3) {
+        top: 55%;
+        left: 47%;
+        z-index: 2;
+      }
+    }
   }
 
   .joinUs {

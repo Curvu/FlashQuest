@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import { Input } from 'components/Input';
 import { Button } from 'components/Button';
-
 import { FlashCard } from 'components/FlashCard';
+
 import styles from './beta.module.scss';
 
 const validation = Yup.object({
@@ -39,9 +39,57 @@ const flashCards = [
       },
     ],
   },
+  {
+    title: 'kfjv sjkf ksjd fsjkd fsjkd fksjd fkjs dfsjd fksdj fskdjf skdjf',
+    response: [
+      {
+        id: 1,
+        title: 'Funções:',
+        description:
+          'kfjv sjkf ksjd fsjkd fsjkd fksjd fkjs dfsjd fksdj fskdjf skdjf',
+      },
+      {
+        id: 2,
+        title: 'Categoria2:',
+        description:
+          'fhsudfbsdiuf sdiuf suf siudf isud fsdf skdjf sdkjf skdjf skjdf ksdjf s',
+      },
+      {
+        id: 3,
+        title: 'Categoria3:',
+        description:
+          'dfj sf sdjf sdkjf sdkjf sdjf skjdf sjkdf ksjdf jksd fkjsd fkjsd fjksd fjks j sdjf skjf ksjd fkjsd fkjsd fjksd fkjsd fkjsd fkjsd f',
+      },
+    ],
+  },
+  {
+    title: 'kfjv sjkf ksjd fsjkd fsjkd fksjd fkjs dfsjd fksdj fskdjf skdjf',
+    response: [
+      {
+        id: 1,
+        title: 'Funções:',
+        description:
+          'kfjv sjkf ksjd fsjkd fsjkd fksjd fkjs dfsjd fksdj fskdjf skdjf',
+      },
+      {
+        id: 2,
+        title: 'Categoria2:',
+        description:
+          'fhsudfbsdiuf sdiuf suf siudf isud fsdf skdjf sdkjf skdjf skjdf ksdjf s',
+      },
+      {
+        id: 3,
+        title: 'Categoria3:',
+        description:
+          'dfj sf sdjf sdkjf sdkjf sdjf skjdf sjkdf ksjdf jksd fkjsd fkjsd fjksd fjks j sdjf skjf ksjd fkjsd fkjsd fjksd fkjsd fkjsd fkjsd f',
+      },
+    ],
+  },
 ];
 
 export function Beta() {
+  const [card, setCard] = useState(10);
+
   const methods = useForm({
     resolver: yupResolver(validation),
   });
@@ -51,9 +99,17 @@ export function Beta() {
   return (
     <main className={styles.main}>
       <section className={styles.cards}>
-        {flashCards.map((item) => (
-          <FlashCard key={item.title} data={item} />
-        ))}
+        {flashCards.map(
+          (item, index) =>
+            index <= card && (
+              <FlashCard
+                key={`${item.title}-${index}`}
+                data={item}
+                index={index}
+                setCard={setCard}
+              />
+            ),
+        )}
       </section>
       <section className={styles.joinUs}>
         <div className={styles.text}>

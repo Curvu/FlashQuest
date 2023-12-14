@@ -4,14 +4,17 @@ import logo from 'assets/logo.svg';
 
 import styles from './flashCard.module.scss';
 
-export function FlashCard({ data: { title, response } }) {
+export function FlashCard({ index, setCard, data: { title, response } }) {
   const [show, setShow] = useState(false);
 
   return (
     <button
       className={styles.card}
       type="button"
-      onClick={() => setShow(!show)}
+      onClick={() => {
+        setCard(index);
+        setShow(!show);
+      }}
     >
       <div className={styles.cardMain}>
         {!show ? (
