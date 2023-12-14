@@ -6,13 +6,18 @@ import styles from './flashCard.module.scss';
 
 export function FlashCard({ index, setCard, data: { title, response } }) {
   const [show, setShow] = useState(false);
+  const [first, setFirst] = useState(true);
 
   return (
     <button
       className={styles.card}
       type="button"
       onClick={() => {
-        setCard(index);
+        if (first) {
+          setFirst(false);
+          setCard(index);
+          return;
+        }
         setShow(!show);
       }}
     >

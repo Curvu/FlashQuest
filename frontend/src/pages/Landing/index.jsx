@@ -12,6 +12,9 @@ import { Solutions } from 'components/Solutions';
 import pic from 'assets/pic.png';
 import imagem from 'assets/imagem.png';
 import banner from 'assets/banner.png';
+import filipe from 'assets/filipe.png';
+import cruz from 'assets/cruz.jpeg';
+import macedo from 'assets/macedo.jpg';
 
 import styles from './landing.module.scss';
 
@@ -46,18 +49,18 @@ const solutions = [
 const pictures = [
   {
     name: 'Filipe Rodrigues',
-    src: pic,
-    alt: 'pic1',
+    src: filipe,
+    alt: 'Filipe Rodrigues photo',
   },
   {
     name: 'José Macedo',
-    src: pic,
-    alt: 'pic2',
+    src: macedo,
+    alt: 'José Macedo photo',
   },
   {
     name: 'Miguel Cruz',
-    src: pic,
-    alt: 'pic3',
+    src: cruz,
+    alt: 'Miguel Cruz photo',
   },
   {
     name: 'Diogo Mota',
