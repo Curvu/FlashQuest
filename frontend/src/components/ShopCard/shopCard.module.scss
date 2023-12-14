@@ -1,0 +1,15 @@
+@import "styles/mixins";
+
+.card {
+  @include flex(column, $align: center, $gap: 1rem);
+
+  .bottom {
+    width: 100%;
+    text-align: left;
+  }
+
+  >button {
+    @include container(transparent, 0, 0, 0);
+    cursor: pointer;
+  }
+}

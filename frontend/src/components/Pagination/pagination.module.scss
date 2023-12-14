@@ -1,0 +1,17 @@
+@import "styles/mixins";
+
+.pagination {
+  @include flex(row, $justify: center, $gap: 0.3rem);
+
+  button {
+    @include flex(row, $align: center, $gap: 0.3rem);
+    @include size(1rem, 1rem);
+    @include container($borderColor: $grey-1, $borderRadius: 50%);
+    cursor: pointer;
+
+    &.active,
+    &:hover {
+      background-color: $grey-1;
+    }
+  }
+}

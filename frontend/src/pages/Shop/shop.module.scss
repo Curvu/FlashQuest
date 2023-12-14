@@ -1,0 +1,44 @@
+@import "styles/mixins";
+
+main {
+  @include flex(column, $gap: 0);
+
+  header {
+    @include size(100%, 45rem);
+    position: relative;
+    padding: 15rem 6rem 0rem 6rem; // top, right, bottom, left
+    background-color: $aqua-2;
+
+    .left {
+      @include flex(column, $align: flex-start, $gap: 2rem);
+      width: 29rem;
+
+      .title {
+        @include flex(column, $align: flex-start);
+
+        h2 {
+          @include text($size: 2.5rem, $spacing: 4px);
+        }
+
+        p {
+          @include text($size: 1rem, $spacing: 1.4px);
+          word-wrap: break-word;
+        }
+      }
+    }
+
+    img {
+      position: absolute;
+      top: 6rem;
+      right: 0;
+      width: 50rem;
+      height: 50rem;
+      object-fit: cover;
+    }
+  }
+
+  .items {
+    @include grid(repeat(2, 1fr) / repeat(3, 1fr), $gap: 2rem);
+    padding: 6rem;
+  }
+}

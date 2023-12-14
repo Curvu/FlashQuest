@@ -2,7 +2,8 @@ import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
 import React from 'react';
 
 import { Navbar } from 'components/Navbar';
-import { Landing } from './pages/Landing';
+import { Landing } from 'pages/Landing';
+import { Shop } from 'pages/Shop';
 
 export function App() {
   return (
@@ -17,6 +18,7 @@ export function App() {
           }
         >
           <Route path="*" element={<Landing />} />
+          <Route path="/loja" element={<Shop />} />
         </Route>
       </Routes>
     </BrowserRouter>

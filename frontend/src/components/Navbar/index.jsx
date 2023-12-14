@@ -12,13 +12,13 @@ export function Navbar() {
 
       <ul>
         <li>
-          <Link to="#">Start</Link>
+          <Link to="/">Start</Link>
         </li>
         <li>
           <Link to="#about">About us</Link>
         </li>
         <li>
-          <a href="#services">Services</a>
+          <Link to="/loja">Loja</Link>
         </li>
         <li>
           <Link to="#contact">Contact</Link>
