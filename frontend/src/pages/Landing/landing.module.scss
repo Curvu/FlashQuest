@@ -81,6 +81,10 @@
 
     .buttons {
       @include flex($gap: 1rem);
+
+      >button {
+        width: 13rem;
+      }
     }
   }
 

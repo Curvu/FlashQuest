@@ -7,6 +7,7 @@
   .solution {
     @include flex;
     align-self: flex-start;
+    z-index: 0;
 
     >span {
       @include flex($justify: center);

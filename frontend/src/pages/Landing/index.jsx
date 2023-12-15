@@ -14,7 +14,7 @@ import banner from 'assets/banner.png';
 import filipe from 'assets/filipe.png';
 import cruz from 'assets/cruz.jpeg';
 import macedo from 'assets/macedo.jpg';
-import diogo from 'assets/diogo.jpeg';
+import diogo from 'assets/diogo.png';
 import marta from 'assets/marta.jpeg';
 
 import styles from './landing.module.scss';
@@ -143,10 +143,7 @@ export function Landing() {
           <Solutions data={solutions} />
           <div className={styles.buttons}>
             <Button type="submit" handle={() => {}} variant="secondary">
-              Button
-            </Button>
-            <Button type="submit" handle={() => {}} variant="tertiary">
-              Button
+              Experimenta já
             </Button>
           </div>
         </div>
@@ -160,7 +157,13 @@ export function Landing() {
             todos os alunos com a geração de flashcards personalizados através
             de IA (Inteligência Artificial).
           </p>
-          <p>Nota: caixa de texto já cá estava mas não sei se será útil</p>
+          <p>
+            Acreditamos que a IA pode ser uma aliada poderosa no momento de
+            estudar, que permite personalizar o conteúdo e o ritmo de
+            aprendizagem de cada um. A nossa empresa é formada por uma equipa
+            jovem, dinâmica e qualificada, que está sempre à procura de novos
+            desafios e oportunidades de crescimento.
+          </p>
         </div>
         <div className={styles.pictures}>
           {pictures.map((picture) => (

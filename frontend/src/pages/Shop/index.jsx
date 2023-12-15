@@ -63,11 +63,12 @@ export function Shop() {
       <header>
         <div className={styles.left}>
           <div className={styles.title}>
-            <h2>Caneca</h2>
+            <h2>Loja</h2>
             <p>
-              Descrição hfksfhkjdf hdkjfhsd kfjh skjdfh skjfh skjdfh skjdfh
-              ksjdfh sjkdf hksjdfh ksjdf hskjdfh kjsdf hkjsdhf kjsdf kjsdf
-              hksjdf ksjd fkjsd fksdh ksjdf hksjdhf ksjfh ksjdhf ksjd
+              Bem-vindo à nossa loja online! Ao comprar na nossa loja, estás a
+              apoiar o nosso projeto e a ajudar-nos a melhorar a nossa
+              ferramenta de aprendizagem. Escolhe os teus favoritos e faz o teu
+              pedido ainda hoje!
             </p>
           </div>
           <Button handle={() => {}} variant="secondary">

@@ -17,71 +17,69 @@ const validation = Yup.object({
 
 const flashCards = [
   {
-    title: 'kfjv sjkf ksjd fsjkd fsjkd fksjd fkjs dfsjd fksdj fskdjf skdjf',
+    title: 'Artéria Carótida Comum',
     response: [
       {
         id: 1,
-        title: 'Funções:',
-        description:
-          'kfjv sjkf ksjd fsjkd fsjkd fksjd fkjs dfsjd fksdj fskdjf skdjf',
+        title: 'Origem:',
+        description: [
+          'Direita - Tronco Braquiocefálico',
+          'Esquerda - Arco Aórtico',
+        ],
       },
       {
         id: 2,
-        title: 'Categoria2:',
-        description:
-          'fhsudfbsdiuf sdiuf suf siudf isud fsdf skdjf sdkjf skdjf skjdf ksdjf s',
+        title: 'Trajeto:',
+        description: [
+          'Porção Torácica - direção à art. externoclavicular',
+          'Porção Cervical - feixe vásculo-nervoso do pescoço',
+        ],
       },
       {
         id: 3,
-        title: 'Categoria3:',
-        description:
-          'dfj sf sdjf sdkjf sdkjf sdjf skjdf sjkdf ksjdf jksd fkjsd fkjsd fjksd fjks j sdjf skjf ksjd fkjsd fkjsd fjksd fkjsd fkjsd fkjsd f',
+        title: 'Terminação:',
+        description: [
+          'Bifurcação junto ao bordo superior da cartilagem tiroideia',
+        ],
       },
     ],
   },
   {
-    title: 'kfjv sjkf ksjd fsjkd fsjkd fksjd fkjs dfsjd fksdj fskdjf skdjf',
+    title: 'Artéria Tiroideia Superior',
     response: [
       {
         id: 1,
-        title: 'Funções:',
-        description:
-          'kfjv sjkf ksjd fsjkd fsjkd fksjd fkjs dfsjd fksdj fskdjf skdjf',
+        title: 'Vasculariza:',
+        description: [
+          'Laringe',
+          'Tiroide',
+          'Músculo Esternocleidomastoideo',
+          'Músculo Infra-hióideos',
+        ],
       },
       {
         id: 2,
-        title: 'Categoria2:',
-        description:
-          'fhsudfbsdiuf sdiuf suf siudf isud fsdf skdjf sdkjf skdjf skjdf ksdjf s',
-      },
-      {
-        id: 3,
-        title: 'Categoria3:',
-        description:
-          'dfj sf sdjf sdkjf sdkjf sdjf skjdf sjkdf ksjdf jksd fkjsd fkjsd fjksd fjks j sdjf skjf ksjd fkjsd fkjsd fjksd fkjsd fkjsd fkjsd f',
+        title: 'Trajeto:',
+        description: [
+          'Dirige-se pelo ápex do lobo da tiroide',
+          '1º atrás do M. Esternocleidomastoideo',
+          '2º atrás do M. esternohioideo',
+        ],
       },
     ],
   },
   {
-    title: 'kfjv sjkf ksjd fsjkd fsjkd fksjd fkjs dfsjd fksdj fskdjf skdjf',
+    title: 'Músculo Pterigoideo Medial',
     response: [
       {
         id: 1,
-        title: 'Funções:',
-        description:
-          'kfjv sjkf ksjd fsjkd fsjkd fksjd fkjs dfsjd fksdj fskdjf skdjf',
-      },
-      {
-        id: 2,
-        title: 'Categoria2:',
-        description:
-          'fhsudfbsdiuf sdiuf suf siudf isud fsdf skdjf sdkjf skdjf skjdf ksdjf s',
-      },
-      {
-        id: 3,
-        title: 'Categoria3:',
-        description:
-          'dfj sf sdjf sdkjf sdkjf sdjf skjdf sjkdf ksjdf jksd fkjsd fkjsd fjksd fjks j sdjf skjf ksjd fkjsd fkjsd fjksd fkjsd fkjsd fkjsd f',
+        title: 'Inserções:',
+        description: [
+          '1 - Fossa  Pterigoide',
+          '2 - Tuberosidade Maxilar',
+          '3 - Proc. Piramidal do Palatimo',
+          '4 - Face Medial da Lâmina Lateral do Processo Pterigoide',
+        ],
       },
     ],
   },

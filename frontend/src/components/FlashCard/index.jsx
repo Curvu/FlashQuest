@@ -34,7 +34,9 @@ export function FlashCard({ index, setCard, data: { title, response } }) {
               {response.map((item) => (
                 <span key={item.id}>
                   <h3>{item.title}</h3>
-                  <p>{item.description}</p>
+                  {item.description.map((i) => (
+                    <p>{i}</p>
+                  ))}
                 </span>
               ))}
             </div>

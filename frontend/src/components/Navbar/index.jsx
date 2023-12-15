@@ -20,10 +20,7 @@ export function Navbar({ variant = 'primary' }) {
 
       <ul>
         <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/beta">Beta</Link>
+          <Link to="/beta">App (Beta)</Link>
         </li>
         <li>
           <Link to="/loja">Loja</Link>
