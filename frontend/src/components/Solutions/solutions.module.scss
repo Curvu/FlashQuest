@@ -44,3 +44,11 @@
     background: rgba(106, 196, 208, 0.50);
   }
 }
+
+@media (max-width: 768px) {
+  .solutions {
+    p {
+      display: none;
+    }
+  }
+}

@@ -1,12 +1,27 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import logo from 'assets/logo.svg';
 
 import styles from './flashCard.module.scss';
 
-export function FlashCard({ index, setCard, data: { title, response } }) {
+export function FlashCard({
+  reset,
+  setReset,
+  index,
+  setCard,
+  data: { title, response },
+}) {
   const [show, setShow] = useState(false);
   const [first, setFirst] = useState(true);
+
+  useEffect(() => {
+    if (reset) {
+      setShow(false);
+      setFirst(true);
+      setReset(false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [reset]);
 
   return (
     <button

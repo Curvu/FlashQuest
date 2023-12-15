@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FormProvider, useForm } from 'react-hook-form';
 import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -76,6 +77,8 @@ const pictures = [
 ];
 
 export function Landing() {
+  const navigate = useNavigate();
+
   const methods = useForm({
     resolver: yupResolver(validation),
   });
@@ -101,7 +104,7 @@ export function Landing() {
             joinUsRef.current.scrollIntoView({ behavior: 'smooth' });
           }}
         >
-          Junte-se
+          Junta-te
         </Button>
       </section>
       <section className={styles.services}>
@@ -142,7 +145,11 @@ export function Landing() {
           </p>
           <Solutions data={solutions} />
           <div className={styles.buttons}>
-            <Button type="submit" handle={() => {}} variant="secondary">
+            <Button
+              type="submit"
+              handle={() => navigate('/beta')}
+              variant="secondary"
+            >
               Experimenta já
             </Button>
           </div>
@@ -175,9 +182,9 @@ export function Landing() {
         <div className={styles.text}>
           <h2>Junte-se a Nós</h2>
           <p>
-            Esta aplicação ainda se encontra em desenvolvimento. Deixa-nos o teu
-            email para seres notificado quando estiver tudo pronto para puderes
-            desfrutar dos nossos serviços.
+            Não percas as novidades! Sê o primeiro a saber quando lançamos novas
+            funcionalidades emocionantes e leva o teu estudo para o próximo
+            nível.
           </p>
         </div>
         <FormProvider {...methods}>
@@ -208,10 +215,10 @@ export function Landing() {
         <div className={styles.dataNotice}>
           <h3>Política de Tratamento de Dados</h3>
           <p>
-            Os conteúdos constantes deste website foram realizados por alunos no
-            âmbito de uma disciplina – Processos de Gestão e Inovação - do 3º
-            ano da licenciatura em Engenharia Informática da Faculdade de
-            Ciências e Tecnologia.
+            Todos os dados coletados serão apagados em janeiro de 2024. A
+            utilização destes dados destina-se exclusivamente a fins
+            estatísticos e académicos no contexto da disciplina de Processos de
+            Gestão e Inovação.
           </p>
         </div>
         <div className={styles.legalNotice}>

@@ -10,7 +10,7 @@
     padding: 0 6rem 15rem 6rem;
 
     >div {
-      @include flex(column, center, $wrap: wrap);
+      @include flex(column, center, flex-start, $wrap: wrap);
       width: 28rem;
 
       >h1 {
@@ -41,7 +41,7 @@
     }
 
     .cards {
-      @include flex($gap: 1.5rem);
+      @include flex($gap: 1.5rem, $justify: center, $wrap: wrap);
 
       >div {
         @include size(15rem, 15rem);
@@ -56,7 +56,7 @@
 
   .solutions {
     @include flex(column, $align: center, $wrap: wrap);
-    padding: 3rem 10% 3rem 55rem; // top right bottom left
+    padding: 4rem 10% 4rem 55rem; // top right bottom left
     background-color: $green-2;
     width: 100%;
     position: relative;
@@ -202,6 +202,127 @@
         font-size: 1rem;
         font-weight: 600;
       }
+    }
+  }
+}
+
+@media (max-width: 1270px) {
+  .presentation {
+    >div {
+      max-width: 60%;
+    }
+
+    >img {
+      width: 30rem !important;
+      height: 30rem !important;
+      right: -8rem !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 6rem !important;
+  }
+
+  h1 {
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+  }
+
+  h2 {
+    font-size: 1.2rem !important;
+  }
+
+  h3 {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+  }
+
+  p {
+    font-size: 0.8rem !important;
+  }
+
+  .presentation {
+    padding: 2rem !important;
+
+    >div {
+      max-width: 50%;
+    }
+
+    >img {
+      width: 17rem !important;
+      height: 17rem !important;
+      right: -6rem !important;
+    }
+  }
+
+  .services {
+    padding: 2rem !important;
+
+    .cards {
+      gap: 0.5rem !important;
+
+      >div {
+        width: 11rem !important;
+        height: 11rem !important;
+        padding: 2rem 1rem;
+      }
+    }
+  }
+
+  .solutions {
+    padding: 3rem 2rem !important;
+
+    >img {
+      display: none;
+    }
+
+    >div {
+      width: 100% !important;
+      gap: 1.5rem !important;
+    }
+
+    .buttons {
+      align-self: center;
+    }
+  }
+
+  .about {
+    flex-direction: column !important;
+    padding: 2rem !important;
+
+    .text {
+      gap: 1rem !important;
+      width: 100% !important;
+    }
+
+    .pictures {
+      display: flex !important;
+      flex-direction: row;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+    }
+  }
+
+  .joinUs {
+    padding: 2rem !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    gap: 2rem !important;
+  }
+
+  footer {
+    flex-direction: column !important;
+    padding: 2rem !important;
+    gap: 2rem !important;
+
+    >div {
+      width: 100% !important;
+      max-width: 100% !important;
     }
   }
 }

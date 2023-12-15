@@ -87,6 +87,7 @@ const flashCards = [
 
 export function Beta() {
   const [card, setCard] = useState(10);
+  const [reset, setReset] = useState(false);
 
   const methods = useForm({
     resolver: yupResolver(validation),
@@ -105,17 +106,29 @@ export function Beta() {
                 data={item}
                 index={index}
                 setCard={setCard}
+                reset={reset}
+                setReset={setReset}
               />
             ),
         )}
+        <Button
+          type="button"
+          handle={() => {
+            setCard(10);
+            setReset(true);
+          }}
+          variant="secondary"
+        >
+          Ver mais
+        </Button>
       </section>
       <section className={styles.joinUs}>
         <div className={styles.text}>
-          <h2>Junte-se a Nós</h2>
+          <h2>Junta-te a Nós</h2>
           <p>
-            Esta aplicação ainda se encontra em desenvolvimento. Deixa-nos o teu
-            email para seres notificado quando estiver tudo pronto para puderes
-            desfrutar dos nossos serviços.
+            Não percas as novidades! Sê o primeiro a saber quando lançamos novas
+            funcionalidades emocionantes e leva o teu estudo para o próximo
+            nível.
           </p>
         </div>
         <FormProvider {...methods}>

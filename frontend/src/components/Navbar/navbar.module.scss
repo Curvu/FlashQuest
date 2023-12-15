@@ -12,22 +12,19 @@
   z-index: 10;
 
   >ul {
-    @include flex(row, flex-end, $gap: 2rem);
+    @include flex(row, flex-end, $gap: 4rem);
     list-style: none;
     margin: 0;
     padding: 0;
 
-    >li {
-      margin-left: 2rem;
+    >li>a {
+      @include text($size: 1.25rem, $weight: 500, $color: $black);
+      @include size(100%, 100%);
+      text-decoration: none;
+      transition: color 0.2s ease-in-out;
 
-      >a {
-        @include text($size: 1.25rem, $weight: 500, $color: $black);
-        text-decoration: none;
-        transition: color 0.2s ease-in-out;
-
-        &:hover {
-          font-weight: 700;
-        }
+      &:hover {
+        font-weight: 700;
       }
     }
   }
@@ -39,4 +36,18 @@
 
 .tertiary {
   background-color: $white;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 2rem;
+
+    ul {
+      gap: 1rem;
+    }
+
+    a {
+      font-size: 1rem !important;
+    }
+  }
 }

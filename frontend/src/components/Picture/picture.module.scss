@@ -23,10 +23,20 @@
     border-radius: 50%;
   }
 
-
   >span {
     @include text($weight: 600, $height: 100%, $spacing: 3.6px);
     width: 100%;
     text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .picture {
+    max-width: 10rem;
+    max-height: 10rem;
+
+    >span {
+      font-size: 0.8rem;
+    }
   }
 }

@@ -2,11 +2,12 @@
 
 main {
   @include flex(column, $gap: 0);
+  overflow: hidden;
 
   header {
     @include size(100%, 45rem);
     position: relative;
-    padding: 10rem 6rem 0rem 6rem; // top, right, bottom, left
+    padding: 10rem 6rem 0 6rem; // top, right, bottom, left
     background-color: $aqua-2;
 
     .left {
@@ -40,5 +41,38 @@ main {
   .items {
     @include grid(repeat(2, 1fr) / repeat(3, 1fr), $gap: 2rem);
     padding: 6rem;
+  }
+}
+
+@media (max-width: 1260px) {
+  header {
+    height: 40rem !important;
+
+    img {
+      height: 60% !important;
+      width: 40% !important;
+      top: 60% !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 6rem 3rem 0 3rem !important;
+    height: 35rem !important;
+
+    .left {
+      width: 100% !important;
+    }
+
+    img {
+      @include size(15rem !important, 15rem !important);
+      top: 70% !important;
+    }
+  }
+
+  .items {
+    grid-template: repeat(6, 1fr) / 1fr !important;
+    padding: 3rem;
   }
 }
