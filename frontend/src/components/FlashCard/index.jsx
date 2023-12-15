@@ -13,7 +13,7 @@ export function FlashCard({ index, setCard, data: { title, response } }) {
       className={styles.card}
       type="button"
       onClick={() => {
-        if (first) {
+        if (index !== 2 && first) {
           setFirst(false);
           setCard(index);
           return;
