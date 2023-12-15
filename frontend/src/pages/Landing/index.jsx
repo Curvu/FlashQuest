@@ -180,7 +180,7 @@ export function Landing() {
       </section>
       <section className={styles.joinUs} ref={joinUsRef}>
         <div className={styles.text}>
-          <h2>Junte-se a Nós</h2>
+          <h2>Junta-te a Nós</h2>
           <p>
             Não percas as novidades! Sê o primeiro a saber quando lançamos novas
             funcionalidades emocionantes e leva o teu estudo para o próximo
