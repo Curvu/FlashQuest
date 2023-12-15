@@ -93,7 +93,17 @@ export function Beta() {
     resolver: yupResolver(validation),
   });
 
-  const onSubmit = (data) => {};
+  const onSubmit = () => {
+    const data = methods.getValues();
+
+    window.open(
+      `mailto:flashquestai@gmail.com
+      ?subject=FlashQuest - Novo Utilizador
+      &body=Olá, o utilizador ${data.name} ${data.surname} (${data.email}) registou-se na plataforma FlashQuest.`,
+    );
+
+    methods.reset();
+  };
 
   return (
     <main className={styles.main}>
@@ -132,13 +142,18 @@ export function Beta() {
           </p>
         </div>
         <FormProvider {...methods}>
-          <form onSubmit={methods.handleSubmit(onSubmit)}>
+          <form
+            onSubmit={methods.handleSubmit(onSubmit)}
+            action="mailto:flashquestai@gmail.com"
+            method="post"
+            encType="text/plain"
+          >
             <div className={styles.inputs}>
               <Input name="name" label="Nome" />
               <Input name="surname" label="Apelido" />
             </div>
             <Input name="email" label="Email" />
-            <Button type="submit" handle={methods.handleSubmit(onSubmit)}>
+            <Button type="submit" handle={onSubmit}>
               Submeter
             </Button>
           </form>
