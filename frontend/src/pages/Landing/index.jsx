@@ -9,12 +9,13 @@ import { Button } from 'components/Button';
 import { Picture } from 'components/Picture';
 import { Card } from 'components/Card';
 import { Solutions } from 'components/Solutions';
-import pic from 'assets/pic.png';
 import imagem from 'assets/imagem.png';
 import banner from 'assets/banner.png';
 import filipe from 'assets/filipe.png';
 import cruz from 'assets/cruz.jpeg';
 import macedo from 'assets/macedo.jpg';
+import diogo from 'assets/diogo.jpeg';
+import marta from 'assets/marta.jpeg';
 
 import styles from './landing.module.scss';
 
@@ -64,13 +65,13 @@ const pictures = [
   },
   {
     name: 'Diogo Mota',
-    src: pic,
-    alt: 'pic4',
+    src: diogo,
+    alt: 'Diogo Mota photo',
   },
   {
     name: 'Marta Antunes',
-    src: pic,
-    alt: 'pic5',
+    src: marta,
+    alt: 'Marta Antunes photo',
   },
 ];
 
