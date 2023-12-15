@@ -7,8 +7,10 @@ import { App } from './App';
 import './styles/global.scss';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <>
     <Analytics />
-    <App />
-  </React.StrictMode>,
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </>,
 );
