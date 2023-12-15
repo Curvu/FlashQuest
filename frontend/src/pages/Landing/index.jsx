@@ -147,7 +147,10 @@ export function Landing() {
           <div className={styles.buttons}>
             <Button
               type="submit"
-              handle={() => navigate('/beta')}
+              handle={() => {
+                navigate('/beta');
+                window.scrollTo(0, 0);
+              }}
               variant="secondary"
             >
               Experimenta já
