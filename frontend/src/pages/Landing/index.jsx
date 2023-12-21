@@ -95,6 +95,7 @@ export function Landing() {
     );
 
     methods.reset();
+    methods.clearErrors();
   };
 
   return (
@@ -193,11 +194,10 @@ export function Landing() {
       </section>
       <section className={styles.joinUs} ref={joinUsRef}>
         <div className={styles.text}>
-          <h2>Junta-te a Nós</h2>
+          <h2>Não percas as novidades</h2>
           <p>
-            Não percas as novidades! Sê o primeiro a saber quando lançamos novas
-            funcionalidades emocionantes e leva o teu estudo para o próximo
-            nível.
+            Sê o primeiro a saber quando lançamos novas funcionalidades
+            emocionantes e leva o teu estudo para o próximo nível.
           </p>
         </div>
         <FormProvider {...methods}>
@@ -213,7 +213,7 @@ export function Landing() {
             </div>
             <Input name="email" label="Email" />
             <Button type="submit" handle={onSubmit}>
-              Submeter
+              Regista-te
             </Button>
           </form>
         </FormProvider>

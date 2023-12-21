@@ -69,7 +69,7 @@ const flashCards = [
     ],
   },
   {
-    title: 'Músculo Pterigoideo Medial',
+    title: 'Músculo Pterigoideu Medial',
     response: [
       {
         id: 1,
@@ -103,6 +103,7 @@ export function Beta() {
     );
 
     methods.reset();
+    methods.clearErrors();
   };
 
   return (
@@ -134,11 +135,10 @@ export function Beta() {
       </section>
       <section className={styles.joinUs}>
         <div className={styles.text}>
-          <h2>Junta-te a Nós</h2>
+          <h2>Não percas as novidades</h2>
           <p>
-            Não percas as novidades! Sê o primeiro a saber quando lançamos novas
-            funcionalidades emocionantes e leva o teu estudo para o próximo
-            nível.
+            Sê o primeiro a saber quando lançamos novas funcionalidades
+            emocionantes e leva o teu estudo para o próximo nível.
           </p>
         </div>
         <FormProvider {...methods}>
@@ -154,7 +154,7 @@ export function Beta() {
             </div>
             <Input name="email" label="Email" />
             <Button type="submit" handle={onSubmit}>
-              Submeter
+              Regista-te
             </Button>
           </form>
         </FormProvider>
