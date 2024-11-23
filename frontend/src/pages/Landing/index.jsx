@@ -233,18 +233,18 @@ export function Landing() {
         <div className={styles.dataNotice}>
           <h3>Política de Tratamento de Dados</h3>
           <p>
-            Todos os dados coletados serão apagados em janeiro de 2024. A
+            Todos os dados coletados serão apagados em fevereiro de 2025. A
             utilização destes dados destina-se exclusivamente a fins
-            estatísticos e académicos no contexto da disciplina de Processos de
-            Gestão e Inovação.
+            estatísticos e académicos no contexto da disciplina de
+            Empreendedorismo e Gestão de Empresas.
           </p>
         </div>
         <div className={styles.legalNotice}>
           <h3>Aviso Legal</h3>
           <p>
             Os conteúdos constantes deste website foram realizados por alunos no
-            âmbito de uma disciplina – Processos de Gestão e Inovação - do 3º
-            ano da licenciatura em Engenharia Informática da Faculdade de
+            âmbito de uma disciplina – Empreendedorismo e Gestão de Empresas - do 1º
+            ano do Mestrado em Engenharia Informática da Faculdade de
             Ciências e Tecnologia da Universidade de Coimbra (FCTUC), pelo que a
             FCTUC não se responsabiliza pelo seu conteúdo.
           </p>
