@@ -15,8 +15,8 @@ import banner from 'assets/banner.png';
 import filipe from 'assets/filipe.png';
 import cruz from 'assets/cruz.jpeg';
 import macedo from 'assets/macedo.jpg';
-import diogo from 'assets/diogo.png';
-import marta from 'assets/marta.jpeg';
+import tiago from 'assets/tiago.jpeg';
+import jose from 'assets/jose.png';
 
 import styles from './landing.module.scss';
 
@@ -65,14 +65,14 @@ const pictures = [
     alt: 'Miguel Cruz photo',
   },
   {
-    name: 'Diogo Mota',
-    src: diogo,
-    alt: 'Diogo Mota photo',
+    name: 'Tiago Anjos',
+    src: tiago,
+    alt: 'Tiago Anjos photo',
   },
   {
-    name: 'Marta Antunes',
-    src: marta,
-    alt: 'Marta Antunes photo',
+    name: 'José Rodrigues',
+    src: jose,
+    alt: 'José Rodrigues photo',
   },
 ];
 
