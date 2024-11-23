@@ -16,7 +16,7 @@ import filipe from 'assets/filipe.png';
 import cruz from 'assets/cruz.jpeg';
 import macedo from 'assets/macedo.jpg';
 import tiago from 'assets/tiago.jpeg';
-import jose from 'assets/jose.png';
+import jose from 'assets/jose.jpeg';
 
 import styles from './landing.module.scss';
 
